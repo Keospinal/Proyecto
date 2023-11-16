@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SubirEstaditica">
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="435dp"
+        android:layout_height="223dp"
+        android:contentDescription="@string/todo5"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/recurso"
+        tools:ignore="ImageContrastCheck" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Estadistica"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23"
+        app:layout_constraintHorizontal_bias="0.1"/>
+
+    <EditText
+        android:id="@+id/idEst"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="id"
+        android:selectAllOnFocus="true"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/fehcaest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.11"
+        android:autofillHints=""
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/fehcaest"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Fecha"
+        android:selectAllOnFocus="true"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/idEst"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.11"
+        android:inputType="text"
+        tools:ignore="TextFields" />
+
+
+    <EditText
+        android:id="@+id/linkest"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="Link de pdf"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idEst"
+        app:layout_constraintVertical_bias="0.02"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/ComenAdiest"
+        android:layout_width="0dp"
+        android:layout_height="250dp"
+        android:hint="Comentario Adicionar"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="200dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linkest"
+        app:layout_constraintVertical_bias="0.02"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/buttonEst"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/cardview_dark_background"
+        android:text="Subir"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

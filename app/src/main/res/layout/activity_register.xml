@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="435dp"
+        android:layout_height="223dp"
+        android:contentDescription="@string/todo5"
+        android:paddingBottom="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/recurso"
+        tools:ignore="ImageContrastCheck" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/registro_nombre"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.23"
+        app:layout_constraintHorizontal_bias="0.1"/>
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="@string/pista_registro_nombre"
+        android:selectAllOnFocus="true"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/Apellido"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.11"
+        android:autofillHints=""
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/Apellido"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="@string/pista_registro_Apellido"
+        android:selectAllOnFocus="true"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nombre"
+        app:layout_constraintTop_toTopOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.11"
+        android:inputType="text"
+        tools:ignore="TextFields" />
+
+
+    <EditText
+        android:id="@+id/Usuario"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="@string/pista_registro_usuario"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombre"
+        app:layout_constraintVertical_bias="0.02"
+        android:inputType="text"
+        android:importantForAutofill="no" />
+
+
+    <EditText
+        android:id="@+id/contraseña"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="@string/pista_registro_contrasena"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Usuario"
+        app:layout_constraintVertical_bias="0.02"
+        android:autofillHints=""
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/Direccion"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="@string/pista_registro_Dirección"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contraseña"
+        app:layout_constraintVertical_bias="0.02"
+        android:autofillHints=""
+        android:inputType="text"/>
+
+    <Spinner
+        android:id="@+id/opcionesCedula"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toStartOf="@+id/Cedula"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Direccion"
+        app:layout_constraintVertical_bias="0.02">
+    </Spinner>
+
+    <EditText
+        android:id="@+id/Cedula"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:hint="@string/pista_registro_cedula"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/opcionesCedula"
+        app:layout_constraintTop_toBottomOf="@+id/Direccion"
+        app:layout_constraintVertical_bias="0.02"
+        android:autofillHints=""
+        android:inputType="number"/>
+
+    <EditText
+        android:id="@+id/Correo"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="@string/pista_registro_correo"
+        android:inputType="textEmailAddress"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opcionesCedula"
+        app:layout_constraintVertical_bias="0.02"
+        android:autofillHints=""/>
+
+    <EditText
+        android:id="@+id/Telefono"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:hint="@string/pista_registro_celular"
+        android:imeOptions="actionDone"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Correo"
+        app:layout_constraintVertical_bias="0.02"
+        android:autofillHints=""
+        android:inputType="number"/>
+
+
+    <Spinner
+        android:id="@+id/opcionescliente"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Telefono"
+        app:layout_constraintVertical_bias="0.02">
+    </Spinner>
+
+
+    <Button
+        android:id="@+id/resgistrarse"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:enabled="true"
+        android:text="@string/btn_registro"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opcionescliente"
+        app:layout_constraintVertical_bias="0.4"
+        android:backgroundTint="@color/cardview_dark_background"
+        tools:ignore="UnknownIdInLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

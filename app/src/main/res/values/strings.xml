@@ -1,0 +1,40 @@
+<resources>
+
+    <string name="ipTxt">192.168.10.98</string>
+
+    <string name="app_name">Proyecto</string>
+    <string name="btn_ingreso">Ingresar</string>
+    <string name="btn_registro">Registrarse</string>
+
+    <string name="pista_usuario">Usuario o Correo</string>
+    <string name="pista_contraseña">constraseña</string>
+
+    <string name="nombre_proyecto">Proyecto</string>
+
+    <string name="nombre_Comentario">Tu reporte:</string>
+    <string name="nombre_impacto">Impacto (1 - 10)</string>
+    <string name="pista_comentario">Tiempo Reporte</string>
+    <string name="pista_lugar">Dinos la dirección</string>
+    <string name="pista_Descripcion">Descripcion Adicional</string>
+    <string name="btn_comentar">Reportar</string>
+
+
+    <string name="registro_nombre">Registro</string>
+    <string name="pista_registro_nombre">Nombre</string>
+    <string name="pista_registro_Apellido">Apellido</string>
+    <string name="pista_registro_Dirección">Direcion</string>
+    <string name="pista_registro_cedula">Cedula o TI</string>
+    <string name="pista_registro_contrasena">Contraseña</string>
+    <string name="pista_registro_usuario">Usuario</string>
+    <string name="pista_registro_correo">Correo</string>
+    <string name="pista_registro_celular">Celular</string>
+    <string name="btn_registrio">registrar</string>
+    <string name="todo">TODO</string>
+    <string name="todo1">TODO</string>
+    <string name="todo3">TODO</string>
+    <string name="todo4">TODO</string>
+    <string name="todo5">TODO</string>
+
+    <string name="caso_otro"></string>
+
+</resources>
