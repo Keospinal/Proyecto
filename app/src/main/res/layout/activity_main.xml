@@ -9,6 +9,7 @@
     xmlns:map="http://schemas.android.com/apk/res-auto"
     tools:context=".InicioActivity">
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -26,7 +27,7 @@
         android:id="@+id/mapa"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
-        android:layout_height="530dp"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,30 +40,31 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="432dp"
-        android:layout_height="734dp"
+        android:layout_width="535dp"
+        android:layout_height="223dp"
         android:contentDescription="@string/todo"
-        android:paddingBottom="545dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/recurso"
-        tools:ignore="ImageContrastCheck,VisualLintBounds" />
-
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/recurso" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="435dp"
         android:layout_height="223dp"
-        android:layout_marginTop="485dp"
         android:contentDescription="@string/todo1"
         android:paddingBottom="30dp"
         android:rotation="180"
         android:rotationY="-180"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/recurso"
         tools:ignore="ImageContrastCheck,VisualLintBounds" />
 
@@ -119,6 +121,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.035" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

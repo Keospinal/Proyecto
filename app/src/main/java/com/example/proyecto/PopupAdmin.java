@@ -27,7 +27,7 @@ public class PopupAdmin extends AppCompatActivity {
     RequestQueue resquestQueue;
     TextView detalles,estaditica;
 
-    static String calamidad, impacto, tiempo, desc;
+    static String calamidad, impacto, tiempo, desc, distancia;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +56,7 @@ public class PopupAdmin extends AppCompatActivity {
                 abd.putExtra("impacto", impacto);
                 abd.putExtra("tiempo", tiempo);
                 abd.putExtra("desc", desc);
+                abd.putExtra("distancia",distancia);
                 startActivities(new Intent[]{abd});
             }
         });
@@ -88,8 +89,8 @@ public class PopupAdmin extends AppCompatActivity {
                             calamidad = response.getString("CALAMIDAD");
                             impacto = response.getString("IMPACTO");
                             tiempo = response.getString("TIEMPO");
-                            //direecion
                             desc = response.getString("DESCRIPCCION");
+                            distancia = response.getString("DISTANCIAAFEC");
 
                             TextView titulo = findViewById(R.id.TituloPopAd);
                             titulo.setText(calamidad);

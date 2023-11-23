@@ -8,16 +8,16 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="432dp"
-        android:layout_height="734dp"
+        android:layout_width="535dp"
+        android:layout_height="223dp"
         android:contentDescription="@string/todo"
-        android:paddingBottom="545dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/recurso"
-        tools:ignore="ImageContrastCheck,VisualLintBounds" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/recurso" />
 
     <TextView
         android:id="@+id/TituloPopCom"

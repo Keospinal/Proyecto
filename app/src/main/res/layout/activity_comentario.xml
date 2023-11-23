@@ -157,6 +157,25 @@
         app:layout_constraintVertical_bias="0.01"
         android:autofillHints=""/>
 
+    <EditText
+        android:id="@+id/DistanciasAfectada"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Distacia afectada"
+        android:imeOptions="actionDone"
+        android:layout_marginStart="30dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:selectAllOnFocus="true"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Comentario_Direccion"
+        app:layout_constraintVertical_bias="0.01"
+        android:autofillHints=""/>
+
     <ImageView
         android:id="@+id/ubicacionbotton"
         android:layout_marginEnd="30dp"
@@ -184,7 +203,7 @@
         android:textColorHint="#8D6E63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Comentario_Direccion"
+        app:layout_constraintTop_toBottomOf="@+id/DistanciasAfectada"
         tools:ignore="TextFields,VisualLintTextFieldSize"
         android:importantForAutofill="no" />
 

@@ -71,8 +71,14 @@
                     android:textSize="20dp" />
             </LinearLayout>
 
-
-
+            <TextView
+                android:id="@+id/DistanciaAfec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DistanciaAfec: 10 km"
+                android:textSize="20dp"
+                android:layout_marginStart="30dp"
+                app:layout_constraintVertical_bias="0.02" />
             <TextView
                 android:id="@+id/txtDirec"
                 android:layout_width="match_parent"
@@ -189,29 +195,31 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="432dp"
-        android:layout_height="734dp"
+        android:layout_width="535dp"
+        android:layout_height="223dp"
         android:contentDescription="@string/todo"
-        android:paddingBottom="545dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/recurso"
-        tools:ignore="ImageContrastCheck,VisualLintBounds" />
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/recurso" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="435dp"
         android:layout_height="223dp"
-        android:layout_marginTop="508dp"
         android:contentDescription="@string/todo1"
         android:paddingBottom="30dp"
         android:rotation="180"
+        android:rotationY="-180"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintHorizontal_bias="0.541"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/recurso"
         tools:ignore="ImageContrastCheck,VisualLintBounds" />
 

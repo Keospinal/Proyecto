@@ -25,7 +25,7 @@ public class PopupCliente extends AppCompatActivity {
 
     RequestQueue resquestQueue;
     TextView detalles;
-    static String calamidad, impacto, tiempo, desc;
+    static String calamidad, impacto, tiempo, desc, distancia;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +57,7 @@ public class PopupCliente extends AppCompatActivity {
                 abd.putExtra("impacto", impacto);
                 abd.putExtra("tiempo", tiempo);
                 abd.putExtra("desc", desc);
+                abd.putExtra("distancia",distancia);
                 startActivities(new Intent[]{abd});
             }
         });
@@ -78,8 +79,9 @@ public class PopupCliente extends AppCompatActivity {
                             calamidad = response.getString("CALAMIDAD");
                             impacto = response.getString("IMPACTO");
                             tiempo = response.getString("TIEMPO");
-                            //direecion
+
                             desc = response.getString("DESCRIPCCION");
+                            distancia = response.getString("DISTANCIAAFEC");
 
                             TextView titulo = findViewById(R.id.TituloPopC);
                             titulo.setText(calamidad);

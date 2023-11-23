@@ -1,18 +1,24 @@
 package com.example.proyecto;
 
 import android.Manifest;
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.IBinder;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -44,6 +50,25 @@ public class ComentarioActivity extends AppCompatActivity {
     private FusedLocationProviderClient fusedLocationProviderClient;
 
     private static String server;
+
+    private odometro odometer;
+    private Boolean enlazado = false;
+
+    private ServiceConnection connection = new ServiceConnection(){
+
+        @Override
+        public void onServiceConnected(ComponentName componentName, IBinder iBinder) {
+            odometro.OdometerBinder odometerBinder = (odometro.OdometerBinder) iBinder;
+            odometer = odometerBinder.getOdometer();
+            enlazado = true;
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+            enlazado = false;
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +97,10 @@ public class ComentarioActivity extends AppCompatActivity {
         opciones2 = new String[]{"1","2","3","4","5","6","7","8","9","10"};
         ArrayAdapter<String> adapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, opciones2);
         spinnerImpacto.setAdapter(adapter2);
+
+        ActivityCompat.requestPermissions(ComentarioActivity.this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},44);
+        actualizarDistancia();
+
 
         Button comentario = findViewById(R.id.reportar);
         comentario.setOnClickListener(new View.OnClickListener() {
@@ -251,6 +280,7 @@ public class ComentarioActivity extends AppCompatActivity {
                 param.put("DESCRIPCCION",Descripccion);
                 param.put("LAT",Lat);
                 param.put("LON",Lon);
+                param.put("DISTANCIAAFEC", String.valueOf(distancia));
                 return param;
             }
         };
@@ -258,7 +288,38 @@ public class ComentarioActivity extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
+    public void onStart() {
+        super.onStart();
+        Intent intent = new Intent(this, odometro.class);
+        bindService(intent,connection, Context.BIND_AUTO_CREATE);
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if (enlazado){
+            unbindService(connection);
+            enlazado=false;
+        }
+    }
+
+    public double distancia;
+    public void actualizarDistancia(){
+        final TextView distancieView =  findViewById(R.id.DistanciasAfectada);
+        final Handler handler = new Handler();
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                distancia = 0.0;
+                if (enlazado && odometer!=null){
+                    distancia = odometer.getDistanciaMetros();
+                }
+                String distanciaStr =String.format(Locale.getDefault(),"%1$, .2f kilometros",distancia);
+                distancieView.setText(distanciaStr);
+                handler.postDelayed(this,1000);
+            }
+        });
+    }
 
 
 }

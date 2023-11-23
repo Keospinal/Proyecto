@@ -23,7 +23,7 @@ public class DetallesReporte extends AppCompatActivity {
 
 
     Button comentarios;
-    String id, calamidad, impacto, tiempo, desc;
+    String id, calamidad, impacto, tiempo, desc,distancia;
 
     RequestQueue resquestQueue;
 
@@ -39,6 +39,7 @@ public class DetallesReporte extends AppCompatActivity {
         impacto = intent.getStringExtra("impacto");
         tiempo = intent.getStringExtra("tiempo");
         desc = intent.getStringExtra("desc");
+        distancia = intent.getStringExtra("distancia");
 
         resquestQueue = Volley.newRequestQueue(this);
 
@@ -51,6 +52,9 @@ public class DetallesReporte extends AppCompatActivity {
         tiem.setText(tiempo);
         TextView des = findViewById(R.id.DescripcionPopAd);
         des.setText(desc);
+        TextView dist = findViewById(R.id.DistanciaAfec);
+        dist.setText("Distancia Afectada:  "+distancia+" Km");
+
 
         comentarios = findViewById(R.id.button);
         comentarios.setOnClickListener(new View.OnClickListener() {
